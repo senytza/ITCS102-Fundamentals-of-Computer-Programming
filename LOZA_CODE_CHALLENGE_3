@@ -1,0 +1,5 @@
+#Code Challenge 3
+#Global Freight Calculator
+#Calculate shipping cost: eval(): weightKG, distanceKM | input():name, weight, distance | "boolean" == True: isFragile
+
+weight = eval(input("How heavy (IN KG) is the item?"))
