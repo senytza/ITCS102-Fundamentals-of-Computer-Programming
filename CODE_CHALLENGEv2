@@ -1,0 +1,26 @@
+#Code Challenge 3
+#Global Freight Calculator
+#Calculate shipping cost: eval(): weightKG, distanceKM | input():name, weight, distance | "boolean" == True: isFragile
+#also .upper or .lower for case sensitivity, not sure exactly the difference but i'll see 
+#VARIABLES
+customer = input("----------------------------------------\nWhat is the customer's name? ->")
+itemType = input("----------------------------------------\nAvailable Items (SELECT ONE):\nA. Cat Food\nB. Dog Food\nC. Pet Bed\nWhat type of item are you buying? (A/B/C) ->").upper()
+weight = eval(input("----------------------------------------\nHow heavy is the item, in kg? ->"))
+distance = eval(input("----------------------------------------\nHow far is the shipping distance, in km? ->"))
+isFragile = bool(input("----------------------------------------\nIs the item fragile, true or false? (True/False) ->"))
+isExpress = bool(input("----------------------------------------\nIs the item a rush order, true or false? (True/False) ->"))
+isInternational = bool(input("----------------------------------------\nIs the item international, true or false? (True/False) ->"))
+
+#COMPUTATION
+baseCost = "$", (weight * 2.50) + (distance * 0.15)
+
+#CONDITIONS
+if weight <= 2.00 and distance <= 100.00 and isExpress != True and isInternational != True :
+    print("The cost will be", baseCost, "and you can avail free shipping."))
+elif weight <= 2.00 and distance <= 100.00 and isExpress == True and isInternational == True :
+    print("The total cost would be $", eval((baseCost * 1.40) + 50), "including express and international."))
+    
+
+
+
+
