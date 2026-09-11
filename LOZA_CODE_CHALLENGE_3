@@ -1,3 +1,5 @@
+#https://docs.google.com/document/d/16llsw9BKlD4TZvoA_ZBigtqE87ukCuPoE6D-CG4onGc/edit?tab=t.0
+
 #Code Challenge 3
 #Global Freight Calculator
 #Calculate shipping cost: eval(): weightKG, distanceKM | input():name, weight, distance | "boolean" == True: isFragile
