@@ -4,7 +4,7 @@
 #STUDENT'S COMMENT FOR TEACHER: Sir M, it wasn't clarified at the beginning that for a bool(input()) to be FALSE, it MUST be left blank. Hence the confusion of the student.
 #Using the BOTH bool(input()) classes for the specified variables must have caused confusion for the students solely because of this unmentioned fact.
 #Admittedly, I had to search up online (Did NOT ask AI to make the code) and ask for help from friends to identify the problem at hand.
-#Additionally, I will include in another file another method without using the boolean. It will be named "Code_Challenge3v2"
+#Additionally, I will include in another file another method without using the boolean. It will be named "Code_Challenge3v2" on my github account: "senytza" under the ITCS102-Fundamentals-of-Computer-Programming.
 
 
 #VARIABLES
