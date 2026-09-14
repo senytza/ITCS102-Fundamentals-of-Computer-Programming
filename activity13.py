@@ -1,4 +1,5 @@
 #https://docs.google.com/document/d/1xwgVEyR7odIKyJp3T0Ku9MOA2QZhN4XBTrrn9NNuuX4/edit?tab=t.0
+#ACTIVITY NOT YET FINISHED. COMPLETE AT HOME PLEASE. REMOVE ME ONCE DONE.
 #age (integer)
 #is_employed (boolean)
 #credit_score (integer)
