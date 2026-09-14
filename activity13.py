@@ -1,0 +1,37 @@
+#https://docs.google.com/document/d/1xwgVEyR7odIKyJp3T0Ku9MOA2QZhN4XBTrrn9NNuuX4/edit?tab=t.0
+#age (integer)
+#is_employed (boolean)
+#credit_score (integer)
+#annual_income (float)
+#has_collateral (boolean)
+
+#VARIABLES
+age = int(input("Enter your age --> "))
+is_employed = bool(input("Are you employed? (True/False) --> "))
+credit_score = int(input("Enter your credit score --> "))
+annual_income = eval(input("Enter your annual income --> "))
+has_collateral = bool(input("Do you have collateral? Write "True" if yes, leave blank if "False" --> "))
+
+#INPUTTED INFORMATION
+print("-------------------------------------------------")
+print("-------------INPUTTED INFORMATION----------------")
+print("User Age:",age)
+print("Employment Status:"is_employed)
+print("Credit Score:",credit_score)
+print("Annual Income:",annual_income)
+print("Collateral Status:",has_collateral)
+
+#CONDITIONS
+print("-------------------------------------------------")
+print("---------------TBA------------------")
+if age >= 21 and is_employed == True:
+    print("You are eligible for a loan.")
+    if credit_score >= 600 and annual_income >= 40000:
+        print("Approved: Meets all criteria.")
+else:
+    print("Rejected: Fails baseline criteria.")
+
+
+
+
+
