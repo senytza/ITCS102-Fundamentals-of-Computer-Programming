@@ -1,12 +1,5 @@
 #https://docs.google.com/document/d/1xwgVEyR7odIKyJp3T0Ku9MOA2QZhN4XBTrrn9NNuuX4/edit?tab=t.0
-#ACTIVITY NOT YET FINISHED. COMPLETE AT HOME PLEASE. REMOVE ME ONCE DONE.
-#age (integer)
-#is_employed (boolean)
-#credit_score (integer)
-#annual_income (float)
-#has_collateral (boolean)
-
-#ACTIVITY NOT YET FINISHED. COMPLETE AT HOME PLEASE. REMOVE ME ONCE DONE.
+#ACTIVITY FINISHED.
 #age (integer)
 #is_employed (boolean)
 #credit_score (integer)
@@ -31,27 +24,32 @@ print("Collateral Status:",has_collateral)
 
 #CONDITIONS
 print("-------------------------------------------------")
-print("---------------LOAN ELIGIBILITY=-----------------")
+print("---------------LOAN ELIGIBILITY------------------")
 if age >= 21 and is_employed:
     print("You are eligible for a loan.")
-    if credit_score >= 600 and annual_income >= 40000:
-        print("Approved: Meets all criteria.")
 else:
     print("Rejected: Fails baseline criteria.")
 
 print("-------------------------------------------------")
 print("--------------FINANCIAL EVALUATION---------------")
 
-if credit_score >= 750:
-    pass
+if age >= 21 and is_employed:
+    print("You are eligible for a loan.")
+    if credit_score >= 750 :
+        interest_rate = "Approved at 5.0% interest."
+        if annual_income >= 100000:
+            interest_rate = "Approved at 4.5% interest."
     if 600 <= credit_score <= 749:
-        pass
-        if credit_score <= 599:
-            pass
-
-
-
-
+        interest_rate = "Approved at 8.0% interest."
+        if has_collateral:
+            interest_rate = "Approved at 7.0% interest."
+        if annual_income <= 39999:
+            interest_rate = "Approved at 9.5 interest."
+    if credit_score <= 599:
+        interest_rate = "Rejected: Credit Score Too Low"
+    print(interest_rate)
+else:
+    print("Rejected: Fails baseline criteria.")
 
 
 
