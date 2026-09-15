@@ -6,6 +6,13 @@
 #annual_income (float)
 #has_collateral (boolean)
 
+#ACTIVITY NOT YET FINISHED. COMPLETE AT HOME PLEASE. REMOVE ME ONCE DONE.
+#age (integer)
+#is_employed (boolean)
+#credit_score (integer)
+#annual_income (float)
+#has_collateral (boolean)
+
 #VARIABLES
 age = int(input("Enter your age --> "))
 is_employed = bool(input("Are you employed? Write 'True' if yes, leave blank if false --> "))
@@ -24,13 +31,26 @@ print("Collateral Status:",has_collateral)
 
 #CONDITIONS
 print("-------------------------------------------------")
-print("---------------LOAN AVAILABILITY-----------------")
+print("---------------LOAN ELIGIBILITY=-----------------")
 if age >= 21 and is_employed:
     print("You are eligible for a loan.")
     if credit_score >= 600 and annual_income >= 40000:
         print("Approved: Meets all criteria.")
 else:
     print("Rejected: Fails baseline criteria.")
+
+print("-------------------------------------------------")
+print("--------------FINANCIAL EVALUATION---------------")
+
+if credit_score >= 750:
+    pass
+    if 600 <= credit_score <= 749:
+        pass
+        if credit_score <= 599:
+            pass
+
+
+
 
 
 
