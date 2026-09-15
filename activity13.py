@@ -16,23 +16,25 @@ has_collateral = bool(input("Do you have collateral? Write 'True' if yes, leave 
 #INPUTTED INFORMATION
 print("-------------------------------------------------")
 print("-------------INPUTTED INFORMATION----------------")
+print()
 print("User Age:",age)
 print("Employment Status:",is_employed)
 print("Credit Score:",credit_score)
 print("Annual Income:",annual_income)
 print("Collateral Status:",has_collateral)
-
+print()
 #CONDITIONS
 print("-------------------------------------------------")
 print("---------------LOAN ELIGIBILITY------------------")
+print()
 if age >= 21 and is_employed:
     print("You are eligible for a loan.")
 else:
     print("Rejected: Fails baseline criteria.")
-
+print()
 print("-------------------------------------------------")
 print("--------------FINANCIAL EVALUATION---------------")
-
+print()
 if age >= 21 and is_employed:
     print("You are eligible for a loan.")
     if credit_score >= 750 :
