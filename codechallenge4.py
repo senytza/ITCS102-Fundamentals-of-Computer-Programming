@@ -1,4 +1,6 @@
 #ACT IN THE WORK, REMOVE ONCE DONE.
+import getpass
+
 #VARIABLES
 u = "user"
 p = "pautang"
