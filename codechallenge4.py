@@ -35,6 +35,80 @@ if username == u: #LOGIN
             collateralValue = eval(input("Value of your collateral? "))
             if collateralValue >= 30000:
                 print("Collateral accepted.")
+                age = int(input("Enter your age --> "))
+                if age>=21<=64:
+                    is_employed = bool(input("Are you employed?'True' if yes, blank if false --> "))
+                    if is_employed:
+                        print(
+                        "\n-------------------------------------------------"
+                        "\n-----------------LOAN ELIGIBILITY----------------"
+                        "\n\n\tYou are eligible for a loan."
+                        "\n\nINPUT INFORMATION:")
+                        credit_score = int(input("Enter your credit score --> "))
+                        annual_income = eval(input("Enter your annual income --> "))
+                        loanAmount = eval(input("How much will you loan from us? --> "))
+                        if credit_score >= 750: #TIER 1
+                            if annual_income >= 100000:
+                                interest_rate = 4.5
+                                total_amount = loanAmount * interest_rate
+                                print(
+                                "\n-------------------------------------------------"
+                                "\n-----------------LOAN DETAILS--------------------"
+                                "\nYour interest rate is:", interest_rate,"%"
+                                "\nYour loan amount is:", loanAmount,
+                                "\nYour total payable is:",total_amount,
+                                "\n\n")
+                            else:
+                                interest_rate = 5.0
+                                total_amount = loanAmount * interest_rate
+                                print(
+                                "\n-------------------------------------------------"
+                                "\n-----------------LOAN DETAILS--------------------"
+                                "\nYour interest rate is:", interest_rate,"%"
+                                "\nYour loan amount is:", loanAmount,
+                                "\nYour total payable is:",total_amount,
+                                "\n\n")
+                        elif 600 <= credit_score <= 749: #TIER 2
+                            interest_rate = 8.0
+                            total_amount = loanAmount * interest_rate
+                            print(
+                            "\n-------------------------------------------------"
+                            "\n-----------------LOAN DETAILS--------------------"
+                            "\nYour interest rate is:", interest_rate,"%"
+                            "\nYour loan amount is:", loanAmount,
+                            "\nYour total payable is:",total_amount,
+                            "\n\n")
+                            if has_collateral:
+                                interest_rate = 7.0
+                                total_amount = loanAmount * interest_rate
+                                print(
+                                "\n-------------------------------------------------"
+                                "\n-----------------LOAN DETAILS--------------------"
+                                "\nYour interest rate is:", interest_rate,"%"
+                                "\nYour loan amount is:", loanAmount,
+                                "\nYour total payable is:",total_amount,
+                                "\n\n")
+                            if annual_income <= 39999:
+                                interest_rate = 9.5
+                                print(
+                                "\n-------------------------------------------------"
+                                "\n-----------------LOAN DETAILS--------------------"
+                                "\nYour interest rate is:", interest_rate,"%"
+                                "\nYour loan amount is:", loanAmount,
+                                "\nYour total payable is:",total_amount,
+                                "\n\n")
+                            elif credit_score <= 599:#TIER 3
+                                print(
+                                "\n-------------------------------------------------"
+                                "\n\n\tRejected: Credit Score Too Low\n"
+                                "\n-------------------------------------------------")
+                    else: #Not employed
+                        print(
+                            "\n-------------------------------------------------"
+                            "\n\n\tRejected: Fails Baseline Criteria.\n"
+                            "\n-------------------------------------------------")
+                else: #age >= 65:
+                    print("Your age is not accounted for.")
             else:#collateralValue <= 29999
                 print("Your collateral's value is too low.")
         elif has_collateral is False:
@@ -53,6 +127,7 @@ if username == u: #LOGIN
                     if credit_score >= 750: #TIER 1
                         if annual_income >= 100000:
                             interest_rate = 4.5
+                            total_amount = loanAmount * interest_rate
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
@@ -62,6 +137,7 @@ if username == u: #LOGIN
                             "\n\n")
                         else:
                             interest_rate = 5.0
+                            total_amount = loanAmount * interest_rate
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
@@ -71,6 +147,7 @@ if username == u: #LOGIN
                             "\n\n")
                     elif 600 <= credit_score <= 749: #TIER 2
                         interest_rate = 8.0
+                        total_amount = loanAmount * interest_rate
                         print(
                         "\n-------------------------------------------------"
                         "\n-----------------LOAN DETAILS--------------------"
@@ -80,6 +157,7 @@ if username == u: #LOGIN
                         "\n\n")
                         if has_collateral:
                             interest_rate = 7.0
+                            total_amount = loanAmount * interest_rate
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
@@ -185,4 +263,3 @@ print(
 #     print(interest_rate)
 # else:
 #     print("Rejected: Fails baseline criteria.")
-
