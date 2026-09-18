@@ -50,7 +50,7 @@ if username == u: #LOGIN
                         if credit_score >= 750: #TIER 1
                             if annual_income >= 100000:
                                 interest_rate = 4.5
-                                total_amount = loanAmount * interest_rate
+                                total_amount = loanAmount % interest_rate
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
@@ -60,7 +60,7 @@ if username == u: #LOGIN
                                 "\n\n")
                             else:
                                 interest_rate = 5.0
-                                total_amount = loanAmount * interest_rate
+                                total_amount = loanAmount % interest_rate
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
@@ -70,7 +70,7 @@ if username == u: #LOGIN
                                 "\n\n")
                         elif 600 <= credit_score <= 749: #TIER 2
                             interest_rate = 8.0
-                            total_amount = loanAmount * interest_rate
+                            total_amount = loanAmount % interest_rate
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
@@ -80,7 +80,7 @@ if username == u: #LOGIN
                             "\n\n")
                             if has_collateral:
                                 interest_rate = 7.0
-                                total_amount = loanAmount * interest_rate
+                                total_amount = loanAmount % interest_rate
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
@@ -90,6 +90,7 @@ if username == u: #LOGIN
                                 "\n\n")
                             if annual_income <= 39999:
                                 interest_rate = 9.5
+                                total_amount = loanAmount % interest_rate
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
@@ -97,8 +98,8 @@ if username == u: #LOGIN
                                 "\nYour loan amount is:", loanAmount,
                                 "\nYour total payable is:",total_amount,
                                 "\n\n")
-                            elif credit_score <= 599:#TIER 3
-                                print(
+                        elif credit_score <= 599:#TIER 3
+                            print(
                                 "\n-------------------------------------------------"
                                 "\n\n\tRejected: Credit Score Too Low\n"
                                 "\n-------------------------------------------------")
