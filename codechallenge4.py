@@ -17,7 +17,7 @@ credit_score = 0
 annual_income = 0
 loanAmount = 0.0
 interest_rate = 0.0
-interest_amount = loanAmount / interest_rate
+interest_amount = 0
 total_amount = loanAmount + interest_amount
 
 #age
@@ -286,3 +286,4 @@ print(
 #     print(interest_rate)
 # else:
 #     print("Rejected: Fails baseline criteria.")
+
