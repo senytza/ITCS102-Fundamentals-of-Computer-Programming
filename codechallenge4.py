@@ -17,7 +17,8 @@ credit_score = 0
 annual_income = 0
 loanAmount = 0.0
 interest_rate = 0.0
-total_amount = loanAmount * interest_rate
+interest_amount = loanAmount / interest_rate
+total_amount = loanAmount + interest_amount
 
 #age
 if username == u: #LOGIN
@@ -50,52 +51,62 @@ if username == u: #LOGIN
                         if credit_score >= 750: #TIER 1
                             if annual_income >= 100000:
                                 interest_rate = 4.5
-                                total_amount = loanAmount % interest_rate
+                                interest_amount = loanAmount / interest_rate
+                                total_amount = loanAmount + interest_amount
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
                                 "\nYour interest rate is:", interest_rate,"%"
                                 "\nYour loan amount is:", loanAmount,
+                                "\nYour interest amount is:" ,interest_amount,
                                 "\nYour total payable is:",total_amount,
                                 "\n\n")
                             else:
                                 interest_rate = 5.0
-                                total_amount = loanAmount % interest_rate
+                                interest_amount = loanAmount / interest_rate
+                                total_amount = loanAmount + interest_amount
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
                                 "\nYour interest rate is:", interest_rate,"%"
                                 "\nYour loan amount is:", loanAmount,
+                                "\nYour interest amount is:" ,interest_amount,
                                 "\nYour total payable is:",total_amount,
                                 "\n\n")
                         elif 600 <= credit_score <= 749: #TIER 2
                             interest_rate = 8.0
-                            total_amount = loanAmount % interest_rate
+                            interest_amount = loanAmount / interest_rate
+                            total_amount = loanAmount + interest_amount
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
                             "\nYour interest rate is:", interest_rate,"%"
                             "\nYour loan amount is:", loanAmount,
+                            "\nYour interest amount is:" ,interest_amount,
                             "\nYour total payable is:",total_amount,
                             "\n\n")
                             if has_collateral:
                                 interest_rate = 7.0
-                                total_amount = loanAmount % interest_rate
+                                interest_amount = loanAmount / interest_rate
+                                total_amount = loanAmount + interest_amount
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
                                 "\nYour interest rate is:", interest_rate,"%"
                                 "\nYour loan amount is:", loanAmount,
+                                "\nYour interest amount is:" ,interest_amount,
                                 "\nYour total payable is:",total_amount,
                                 "\n\n")
                             if annual_income <= 39999:
                                 interest_rate = 9.5
-                                total_amount = loanAmount % interest_rate
+                                interest_amount = loanAmount / interest_rate
+                                total_amount = loanAmount + interest_amount
                                 print(
                                 "\n-------------------------------------------------"
                                 "\n-----------------LOAN DETAILS--------------------"
                                 "\nYour interest rate is:", interest_rate,"%"
                                 "\nYour loan amount is:", loanAmount,
+                                "\nYour interest amount is:" ,interest_amount,
                                 "\nYour total payable is:",total_amount,
                                 "\n\n")
                         elif credit_score <= 599:#TIER 3
@@ -128,51 +139,62 @@ if username == u: #LOGIN
                     if credit_score >= 750: #TIER 1
                         if annual_income >= 100000:
                             interest_rate = 4.5
-                            total_amount = loanAmount * interest_rate
+                            interest_amount = loanAmount / interest_rate
+                            total_amount = loanAmount + interest_amount
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
                             "\nYour interest rate is:", interest_rate,"%"
                             "\nYour loan amount is:", loanAmount,
+                            "\nYour interest amount is:" ,interest_amount,
                             "\nYour total payable is:",total_amount,
                             "\n\n")
                         else:
                             interest_rate = 5.0
-                            total_amount = loanAmount * interest_rate
+                            interest_amount = loanAmount / interest_rate
+                            total_amount = loanAmount + interest_amount
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
                             "\nYour interest rate is:", interest_rate,"%"
                             "\nYour loan amount is:", loanAmount,
+                            "\nYour interest amount is:" ,interest_amount,
                             "\nYour total payable is:",total_amount,
                             "\n\n")
                     elif 600 <= credit_score <= 749: #TIER 2
                         interest_rate = 8.0
-                        total_amount = loanAmount * interest_rate
+                        interest_amount = loanAmount / interest_rate
+                        total_amount = loanAmount + interest_amount
                         print(
                         "\n-------------------------------------------------"
                         "\n-----------------LOAN DETAILS--------------------"
                         "\nYour interest rate is:", interest_rate,"%"
                         "\nYour loan amount is:", loanAmount,
+                        "\nYour interest amount is:" ,interest_amount,
                         "\nYour total payable is:",total_amount,
                         "\n\n")
                         if has_collateral:
                             interest_rate = 7.0
-                            total_amount = loanAmount * interest_rate
+                            interest_amount = loanAmount / interest_rate
+                            total_amount = loanAmount + interest_amount
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
                             "\nYour interest rate is:", interest_rate,"%"
                             "\nYour loan amount is:", loanAmount,
+                            "\nYour interest amount is:" ,interest_amount,
                             "\nYour total payable is:",total_amount,
                             "\n\n")
                         if annual_income <= 39999:
                             interest_rate = 9.5
+                            interest_amount = loanAmount / interest_rate
+                            total_amount = loanAmount + interest_amount
                             print(
                             "\n-------------------------------------------------"
                             "\n-----------------LOAN DETAILS--------------------"
                             "\nYour interest rate is:", interest_rate,"%"
                             "\nYour loan amount is:", loanAmount,
+                            "\nYour interest amount is:" ,interest_amount,
                             "\nYour total payable is:",total_amount,
                             "\n\n")
                     elif credit_score <= 599:#TIER 3
