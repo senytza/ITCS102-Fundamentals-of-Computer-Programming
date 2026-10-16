@@ -8,3 +8,11 @@ for a in range(1, 7):
     print()
 print("======================")
 
+# for a in range(7, 0, -1):
+#     for b in range(a+1, 8):
+#         print(b, end=" ")
+#     print()
+
+# # end=" ")
+
+# # 7, 0, -1
