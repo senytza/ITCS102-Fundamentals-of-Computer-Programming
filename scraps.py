@@ -22,4 +22,16 @@ for x in range(count):
     print()
 
 
+#CHANGABLE BOX SIZE
+rows = int(input("Enter number of rows: "))
+columns = int(input("Enter number of columns: "))
+
+for x in range(rows):
+    for y in range(columns):
+        if x==0 or x==rows-1 or y==0 or y==columns-1:
+            print("*",end="")
+        else:
+            print("",end=" ")
+    print()
+
 #TBC
