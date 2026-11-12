@@ -1,32 +1,51 @@
 # interest rate: 0.00256
-# interest = interest rate
-# monthly payment = loan * interest
-# principal = monthly payment - interest
-
-
-
+# interest = interest rate * loan
+# monthly payment = interest+prncpl
+print("\tTASK #1\n")
 loan = int(input("Enter the loan amount: $"))
 lPeriod = int(input("Enter the loan period in years: "))
-# lMonths = lPeriod * 12
 iRate = 0.00256
-interest = loan * iRate
-principal = 4
+remLoan = loan
+interest = remLoan*iRate
+months = lPeriod*12
+principal = loan / months
+monthPay = interest+principal
 
+# print(f"\n\nLoan: {loan}"
+# f"\nPeriod: {lPeriod}"
+# f"\nInterest Rate: {iRate}"
+# f"\nRemaining Loan: {remLoan}"
+# f"\nInterest: {interest}"
+# f"\nPeriod in Months: {months}"
+# f"\nPrincipal: {round(principal, 2)}"
+# f"\nMonthly Payment: {round(monthPay, 2)}\n\n")
+print(
+    "Payment Schedule"
+    "\nMonth\t|  Monthly Payment\t|  Interest\t|  Principal\t\t|  Remaining Loan"
+    "\n-----------------------------------------------------------------------------------------")
+for x in range(0, 12*lPeriod):
+    interest = remLoan*iRate
+    monthPay = interest+principal
+    remLoan = remLoan-principal
+    for y in range(1):
+        print(f"{x+1}\t|  ${round(monthPay, 2)}\t\t| ${round(interest, 2)}\t\t| ${round(principal, 2)}\t\t| ${round(remLoan, 2)}")
+    print(end="")
 
-for x in range(1, 12*lPeriod):
-    print(f"{lPeriod} | monthlypayment | {interest} | {principal} | remainingloan")
+print(
+    "\n-----------------------------------------------------------------------------------------"
+    "\n-----------------------------------------------------------------------------------------"
+    "\n\n\tTASK #2\n")
 
-print(f"Loan {loan}\nPeriod {lPeriod}\nIrate {iRate}\nInterest {interest}\nPrincipal {principal}")
 
 
 
 # IBA PA
 
-for x in range(5, 0, -1):
-    for y in range(x):
-        print(" ",end=" ")
-    for z in range(1, 7-x):
-        print(z,end=" ")
-    for w in range(5,, -1):
-        print(w,end=" ")
-    print()
+# for x in range(5, 0, -1):
+#     for y in range(x):
+#         print(" ",end=" ")
+#     for z in range(1, 7-x):
+#         print(z,end=" ")
+#     for w in range(5,, -1):
+#         print(w,end=" ")
+#     print()
