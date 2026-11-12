@@ -36,16 +36,23 @@ print(
     "\n-----------------------------------------------------------------------------------------"
     "\n\n\tTASK #2\n")
 
+for x in range(7):
+    for y in range(13):
+        if x==6 or x+y==6 or x==y-6:
+            print("*",end="")
+        else:
+            print(" ",end="")
+    print()
 
+print(
+    "\n-----------------------------------------------------------------------------------------"
+    "\n-----------------------------------------------------------------------------------------"
+    "\n\n\tTASK #3\n")
 
-
-# IBA PA
-
-# for x in range(5, 0, -1):
-#     for y in range(x):
-#         print(" ",end=" ")
-#     for z in range(1, 7-x):
-#         print(z,end=" ")
-#     for w in range(5,, -1):
-#         print(w,end=" ")
-#     print()
+for x in range(9):
+    for y in range(5):
+        if x==0 or x==4 or x+y==4:
+            print("*",end="")
+        else:
+            print(" ",end="")
+    print()
